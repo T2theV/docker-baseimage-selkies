@@ -193,13 +193,14 @@ RUN \
     xterm \
     xutils \
     xvfb \
+   dolphin-emu \
     zlib1g && \
   echo "**** install selkies ****" && \
   SELKIES_RELEASE=$(curl -sX GET "https://api.github.com/repos/selkies-project/selkies/releases/latest" \
     | awk '/tag_name/{print $4;exit}' FS='[""]') && \
   curl -o \
     /tmp/selkies.tar.gz -L \
-    "https://github.com/selkies-project/selkies/archive/cf289a88106097239d320f5b64d8d87cb5028033.tar.gz" && \
+    "https://github.com/t2thev/selkies/archive/45bda6358254525eab058ff489bc422aae4a752a.tar.gz" && \
   cd /tmp && \
   tar xf selkies.tar.gz && \
   cd selkies-* && \
